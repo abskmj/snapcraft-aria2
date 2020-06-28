@@ -12,6 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: |
+        wget -c https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.gz -O - | tar -xvz --directory ./
         ./configure --with-ca-bundle='/etc/ssl/certs/ca-certificates.crt'
         make
         tar -czvf aria2.tar.gz src/aria2c
