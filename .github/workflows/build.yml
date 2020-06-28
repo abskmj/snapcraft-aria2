@@ -17,4 +17,4 @@ jobs:
         ./configure --with-ca-bundle='/etc/ssl/certs/ca-certificates.crt'
         make
         tar -czvf aria2.tar.gz src/aria2c
-        ls -l aria2.tar.gz
+        tar -ztvf aria2.tar.gz
