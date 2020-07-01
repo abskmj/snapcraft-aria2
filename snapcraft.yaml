@@ -1,4 +1,4 @@
-name: aria2
+name: aria2c
 base: core18
 version: 1.35.0
 summary: The next generation download utility
@@ -10,9 +10,14 @@ confinement: strict
 
 parts:
   aria2:
-    plugin: dump
+    plugin: autotools
+    configflags:
+      - --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt
+    source-type: tar
     source: https://github.com/aria2/aria2/releases/download/release-$SNAPCRAFT_PROJECT_VERSION/aria2-$SNAPCRAFT_PROJECT_VERSION.tar.gz
+    build-packages:
+      - g++
 
 apps:
-  kustomize:
-    command: kustomize
+  aria2c:
+    command: aria2c

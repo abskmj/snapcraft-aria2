@@ -1,0 +1,27 @@
+{
+  "name": "snapcraft-aria2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abskmj/snapcraft-aria2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abskmj/snapcraft-aria2/issues"
+  },
+  "homepage": "https://github.com/abskmj/snapcraft-aria2#readme",
+  "devDependencies": {
+    "husky": "^4.2.5"
+  },
+  "husky": {
+    "hooks": {
+      "post-push": "hukum"
+    }
+  }
+}
