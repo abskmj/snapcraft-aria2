@@ -27,7 +27,9 @@ jobs:
     - name: Snapcraft
       run: |
         sudo snap install snapcraft --classic
+        echo "$SNAP_TOKEN" | snapcraft login --with -
         snapcraft
+        snapcraft upload --release=stable aria2c_*.snap
       env:
         SNAP_TOKEN: ${{secrets.SNAP_TOKEN}} 
         SNAPCRAFT_BUILD_ENVIRONMENT: host
