@@ -21,6 +21,9 @@ parts:
     #   - libssl-dev
     plugin: dump
     source: aria2/aria2.tar.gz
+    stage-packages:
+      - libicu60
+      - libxml2
 
 apps:
   aria2c:
