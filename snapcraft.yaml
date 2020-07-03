@@ -20,7 +20,7 @@ parts:
     #   - g++
     #   - libssl-dev
     plugin: dump
-    source: aria2-1.35.0/src/aria2c
+    source: aria2/aria2.tar.gz
 
 apps:
   aria2c:
