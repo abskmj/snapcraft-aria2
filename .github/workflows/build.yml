@@ -15,7 +15,7 @@ jobs:
         mkdir -p aria2
         wget -c https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.gz -O - | tar -xvz --directory ./
         cd aria2-1.35.0
-        ./configure --with-ca-bundle='/etc/ssl/certs/ca-certificates.crt'
+        ./configure
         make
         mv ./src/aria2c ../aria2
         cd ..
