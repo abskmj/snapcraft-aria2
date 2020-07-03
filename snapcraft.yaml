@@ -10,15 +10,17 @@ confinement: strict
 
 parts:
   aria2:
-    plugin: autotools
-    configflags:
-      - --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt
-      - ARIA2_STATIC=yes
-    source-type: tar
-    source: https://github.com/aria2/aria2/releases/download/release-$SNAPCRAFT_PROJECT_VERSION/aria2-$SNAPCRAFT_PROJECT_VERSION.tar.gz
-    build-packages:
-      - g++
-      - libssl-dev
+    # plugin: autotools
+    # configflags:
+    #   - --with-ca-bundle=/etc/ssl/certs/ca-certificates.crt
+    #   - ARIA2_STATIC=yes
+    # source-type: tar
+    # source: https://github.com/aria2/aria2/releases/download/release-$SNAPCRAFT_PROJECT_VERSION/aria2-$SNAPCRAFT_PROJECT_VERSION.tar.gz
+    # build-packages:
+    #   - g++
+    #   - libssl-dev
+    plugin: dump
+    source: aria2-1.35.0/src/aria2c
 
 apps:
   aria2c:
