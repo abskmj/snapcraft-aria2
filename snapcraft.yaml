@@ -24,6 +24,8 @@ parts:
     stage-packages:
       - libicu60
       - libxml2
+      - libc-ares2
+      - libssh2-1
 
 apps:
   aria2c:
