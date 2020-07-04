@@ -12,7 +12,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build
       run: |
-        sudo apt-get install -y libgnutls-dev nettle-dev libgmp-dev libssh2-1-dev libc-ares-dev libxml2-dev zlib1g-dev libsqlite3-dev pkg-config
+        sudo apt-get install -y libssl-dev libssh2-1-dev libc-ares-dev libxml2-dev zlib1g-dev libsqlite3-dev pkg-config
         mkdir -p aria2
         wget -c https://github.com/aria2/aria2/releases/download/release-1.35.0/aria2-1.35.0.tar.gz -O - | tar -xvz --directory ./
         cd aria2-1.35.0
