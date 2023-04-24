@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/abskmj/snapcraft-aria2#readme",
   "devDependencies": {
-    "husky": "^4.2.5"
+    "husky": "^8.0.3"
   },
   "husky": {
     "hooks": {
